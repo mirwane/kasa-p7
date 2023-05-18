@@ -5,10 +5,13 @@ import "./ApartmentCard.scss";
 
 function ApartmentCard(props) {
   return (
+    // Utilisation de la composante Link de react-router-dom pour créer un lien vers la page "/flat"
+    // et passage des données de l'appartement via l'état de location
+    // (voir src\components\ApartmentGrid.jsx pour l'utilisation de ce lien)
     <Link
       to="/flat"
       state={{
-        apartmentId: props.id
+        apartmentId: props.id,
       }}
     >
       <div className="apartment">

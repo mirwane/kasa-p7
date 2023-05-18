@@ -1,5 +1,7 @@
 import React from "react";
 import "./Footer.scss";
+
+// Définition du composant Footer en tant que fonction
 function Footer() {
   return (
     <div className="footer">

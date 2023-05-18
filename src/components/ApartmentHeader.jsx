@@ -2,6 +2,7 @@ import React from "react";
 import "./ApartmentHeader.scss";
 
 export function ApartmentHeader({ flat }) {
+  // Extraction du nom de l'hôte du logement
   const { name } = flat.host;
   const [firstName, lastName] = name.split(" ");
 

@@ -8,6 +8,7 @@ import ApartmentPage from "../pages/ApartmentPage";
 import About from "../pages/About";
 import { ErrorPageNotFound } from "../pages/ErrorPageNotFound";
 
+// Définition du composant de mise en page avec en-tête, section principale et pied de page
 const HeaderFooterLayout = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const HeaderFooterLayout = () => {
   );
 };
 
+// Création des routes de l'application
 export const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout />,
@@ -27,16 +29,16 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomePage />
+        element: <HomePage />,
       },
       {
         path: "/flat",
-        element: <ApartmentPage />
+        element: <ApartmentPage />,
       },
       {
         path: "/about",
-        element: <About />
-      }
-    ]
-  }
+        element: <About />,
+      },
+    ],
+  },
 ]);

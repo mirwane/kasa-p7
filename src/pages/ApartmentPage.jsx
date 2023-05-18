@@ -5,9 +5,11 @@ import { ImageBanner } from "../components/ImageBanner";
 import { ApartmentHeader } from "../components/ApartmentHeader";
 import { useApartment } from "../hooks/useApartment";
 
+// Utilisation du hook personnalisé useApartment pour récupérer les informations de l'appartement
 function ApartmentPage() {
   const flat = useApartment();
 
+  // Affichage d'un message de chargement si les données de l'appartement ne sont pas encore disponibles
   if (flat == null) return <div>Loading...</div>;
   return (
     <div className="apartment-page">

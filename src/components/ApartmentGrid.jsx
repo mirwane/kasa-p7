@@ -4,6 +4,7 @@ import ApartmentCard from "./ApartmentCard.jsx";
 import { useApartments } from "./../hooks/useApartments.jsx";
 
 function ApartmentGrid() {
+  // Utilisation du hook personnalisé useApartments pour obtenir la liste des appartements
   const apartments = useApartments();
   return (
     <div className="grid">

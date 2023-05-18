@@ -6,15 +6,18 @@ export function ImageBanner(props) {
 
   const [currentPicture, setCurrentPicture] = useState(0);
 
+  // Fonction pour obtenir la classe CSS en fonction de l'indice de l'image
   const getClassName = (i) => {
     if (i === currentPicture) return "show";
     return "";
   };
 
+  // Fonction pour passer à l'image suivante
   const moveToNext = () => {
     setCurrentPicture((currentPicture + 1) % pictures.length);
   };
 
+  // Fonction pour passer à l'image précédente
   const moveToPrevious = () => {
     const newCurrentPicture = currentPicture - 1;
     if (newCurrentPicture < 0) {
@@ -24,10 +27,12 @@ export function ImageBanner(props) {
     setCurrentPicture(currentPicture - 1);
   };
 
+  // Fonction pour vérifier si des images sont disponibles
   const arePicturesAvailable = () => {
     return pictures && pictures.length > 0;
   };
 
+  // Fonction pour obtenir le carrousel d'images ou une image par défaut
   const getCarouselOrDefaultImage = () => {
     if (!arePicturesAvailable()) {
       return <img src="https://picsum.photos/800" className="show" alt="" />;

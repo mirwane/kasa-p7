@@ -1,6 +1,7 @@
 import React from "react";
 import "./Banner.scss";
 
+// Définition du composant Banner en tant que fonction
 function Banner() {
   return (
     <div className="banner">
